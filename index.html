@@ -36,9 +36,13 @@ function onBuyClicked() {
       amount: { currency: 'USD', value : '55.00' }
     }
   };
-
+  
+  var options = {
+    requestPayerEmail: true,
+    requestPayerPhone: true
+  };
   // 1. Create a `PaymentRequest` instance
-  var request = new PaymentRequest(supportedInstruments, details);
+  var request = new PaymentRequest(supportedInstruments, details, options);
 
   // 2. Show the native UI with `.show()`
   request.show()
