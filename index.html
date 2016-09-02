@@ -86,7 +86,7 @@ if ('PaymentRequest' in window) {
   buyButton.addEventListener('click', onBuyClicked);
 } else {
   buyButton.setAttribute('style', 'display: none;');
-  ChromeSamples.setStatus('This browser does not support web payments');
+  alert('This browser does not support web payments');
 }
 
 </script>
